@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-3.8.0.min.css" />
+    <title>FORM</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+      body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      legend {
+        text-align: center;
+        justify-content: center;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+          <legend>Formulir Pendaftaran Mahasiswa Baru</legend>
+        <table border="1">
+          <tr>
+            <td>Nama</td>
+            <td><input type="text" name="nama" placeholder="Masukan Nama Anda"></td>
+          </tr>
+          <tr>
+            <td>Tempat Lahir</td>
+            <td><input type="text" name="tempat_lahir" placeholder="Masukan Tempat Lahir Anda"></td>
+          </tr>
+          <tr>
+            <td>Tgl. Lahir</td>
+            <td><input type="date" name="tgl_lahir"></td>
+          </tr>
+          <tr>
+            <td>Agama</td>
+            <td>
+              <select name="" id="">
+                <optgroup label="001">
+                  <option value="0">HINDU</option>
+                  <option value="1">ISLAM</option>
+                  <option value="2">KRISTEN</option>
+                </optgroup>
+                <optgroup label="002">
+                  <option value="3">KATOLIK</option>
+                  <option value="4">KONGHUCHU</option>
+                  <option value="5">BUDDHA</option>
+                </optgroup>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Jenis Kelamin</td>
+            <td>
+              <input type="radio" name="jk" value="1">Laki-Laki
+              <input type="radio" name="jk" value="0">Perempuan
+            </td>
+          </tr>
+          <tr>
+            <td>Program Studi</td>
+            <td>
+              <input type="radio" name="ps" value="1">S1 - Sistem Informasi <br>
+              <input type="radio" name="ps" value="2">S1 - Sistem Komputer <br>
+              <input type="radio" name="ps" value="3">S1 - Teknik Informatika
+            </td>
+          </tr>
+          <tr>
+            <td>Hobi</td> 
+            <td>
+              <input type="checkbox" name="hobi" value="0">Renang <br>
+              <input type="checkbox" name="hobi" value="1">Tidur/Rebahan <br>
+              <input type="checkbox" name="hobi" value="2">Nonton Film <br>
+            </td>
+          </tr>
+          <tr>
+            <td>Status Mahasiswa</td> 
+            <td>
+              <input type="radio" id="bekerja" name="status_mahasiswa" value="BEKERJA">
+              <label for="bekerja">Bekerja</label><br>
+              <input type="radio" id="tidakbekerja" name="status_mahasiswa" value="TIDAKBEKERJA">
+              <label for="tidakbekerja">Tidak Bekerja</label><br>
+            </td>
+          </tr>
+          <tr>
+            <td>Skill</td> 
+            <td>
+              <input list="skill">
+              <datalist id="skill">
+                <option value="Computer Troubleshooter"></option>
+                <option value="Bermain Game"></option>
+                <option value="Ngoding"></option>
+              </datalist>
+            </td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td><input type="password" name="psd" placeholder="Masukkan Password Anda"></td>
+          </tr>
+          <tr>
+            <td>Keterangan</td>
+            <td><textarea name="" id="" cols="30" rows="10" placeholder="Tulis Keterangan"></textarea></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button type="submit" value="Login" onclick="simpan()">Simpan</button>
+              <button type="reset">Hapus</button>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+    <span>Copyright &copy; 2022</span>
+  </body>
+  <script>
+    const simpan = () => {
+      alert('data berhasil disimpan');
+    }
+  </script>
+</html>

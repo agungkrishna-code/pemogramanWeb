@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+}
+
+img {
+    border-radius: 5%;
+}
+
+/* Child Selector */
+.child > .child-text {
+    background-color: aqua;
+    color:black ;
+}
+
+.header {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    color: #f1f1f1;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.sidenav {
+    flex: 1 1 5rem;
+    padding-top: 3rem;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius: 2%;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}
+
+/* Descendant Selector */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+    background-color: aqua;
+    border-radius: 5%;
+}
+
+/* Descendant Selector */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.main-content {
+    flex: 7 7;
+    padding-top: 3rem;
+}
+
+.berita {
+    text-align: left;
+}
+
+.text {
+    font-weight: 700;
+}
+
+.sidebar {
+    flex: 1 1 5rem;
+}
+
+.sidebar :hover {
+    background-color: aqua;
+    color: #f1f1f1;
+    border-radius: 5%;
+}
+
+
+.footer {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+
+@media all and (max-width: 540px) {
+    .main-container {
+        flex-direction: column;
+    }
+}
+

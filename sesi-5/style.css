@@ -1,0 +1,24 @@
+#kontainer {
+  margin: 0 auto;
+  width: 600px;
+}
+#div1 {
+  background-color: red;
+  float: left;
+  width: 150px;
+}
+#div2 {
+  background-color: aquamarine;
+  float: left;
+  width: 300px;
+}
+#div3 {
+  background-color: brown;
+  float: left;
+  width: 150px;
+}
+#div4 {
+  background-color: rgb(130, 218, 76);
+  clear: both;
+  width: 600px;
+}

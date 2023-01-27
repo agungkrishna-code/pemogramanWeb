@@ -1,0 +1,150 @@
+<h1 class="p-5" style="text-align:center;">TAMBAH DATA MAHASISWA</h1>
+<!--input data akan diproses pada halaman user-save.php-->
+<div class="col-md-8 m-auto card p-5 shadow p-3 mb-5 bg-body rounded">
+    <form name="form1" action="user-save.php" method="post" onSubmit="return cek_form(this)" enctype="multipart/form-data">
+<!--method:POST -> ID/pengenal yg akan diparsing adalah atribut "name" pada masing-masing control-->
+<!--enctype="multipart/form-data" digunakan untuk kebutuhan upload file-->
+    <table class="table table-striped">
+        <tr>
+            <td>NIM</td>
+            <td><input type="text" name="nim" class="txt" maxlength="9"></td>
+        </tr>	
+        <tr>
+            <td>Nama</td>
+            <td><input type="text" name="nama" class="txt" maxlength="25"></td>
+        </tr>
+        <tr>
+            <td>Alamat</td>
+            <td><input type="text" name="alamat" class="txt" maxlength="30"></td>
+        </tr>
+        <tr>
+            <td>Jenis Kelamin</td>
+            <td>       
+            <input type="radio" name="jenis_kelamin" class="radio" checked="checked"> Laki-laki
+            <input type="radio" name="jenis_kelamin" class="radio"> Perempuan
+            </td>
+        </tr>
+        <tr>
+            <td>Foto Profile</td>
+            <td><input name="foto" type="file"/></td>
+        </tr>
+    </table>
+        <button type="submit" class="btn btn-success" value="Simpan">Submit</button>
+        <button type="submit" class="btn btn-secondary" value="Reset">Reset</button>
+        <button class="btn btn-primary">
+            <a style="color: white; text-decoration: none;" href="home.php">Kembali</a>
+        </button>
+    </form>
+</div>
+
+
+
+
+<!-- <div class="col-10 m-auto" style="padding: 100px 0 0 0;"></div>
+<h2 class="text-center fw-bold">Tambah Data Mahasiswa</h2>
+<div class="col-md-8 m-auto card p-5 shadow p-3 mb-5 bg-body rounded">
+  <form name="form1" action="user-save.php" method="post" onSubmit="return cek_form(this)" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Nim</label>
+      <input name="nim" type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Nama</label>
+      <input name="nama" type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Alamat</label>
+      <textarea name="alamat" class="form-control" id="exampleFormControlInput1"></textarea>
+    </div>
+    <div class="mb-3">
+      <p>Jenis Kelamin</p>
+      <input type="radio" name="jenis_kelamin" class="radio">
+      <label for="genderInput" class="form-label">Laki-Laki</label>
+      <input type="radio" name="jenis_kelamin" class="radio">
+      <label for="genderInput" class="form-label">Perempuan</label>
+    </div>
+    <div class="mb-3">
+      <td>Foto Profile</td>
+      <td><input name="foto" type="file"/></td>
+    </div>
+    <div class="col-3 m-auto">
+      <button type="submit" class="btn btn-success" value="Simpan">Submit</button>
+      <button type="submit" class="btn btn-secondary" value="Reset">Reset</button>
+      <a class="btn btn-primary" style="color: white; text-decoration: none;" href="home.php">Kembali</a>
+    </div>
+  </form>
+</div> -->
+
+
+<!-- ubah -->
+<form name="form1" action="user-update.php" method="post" onSubmit="return cek_form(this)" enctype="multipart/form-data"></form>
+
+<div class="col-md-8 m-auto card p-5 shadow p-3 mb-5 bg-body rounded">
+  <form name="form1" action="user-update.php" method="post" onSubmit="return cek_form(this)" enctype="multipart/form-data">
+  <!--method:POST -> ID/pengenal yg akan diparsing adalah atribut "name" pada masing-masing control-->
+  <!--enctype="multipart/form-data" digunakan untuk kebutuhan upload file -->
+  <!--menyisipkan kode PHP pada script HTML-->
+  <table class="table table-striped">
+      <tr>
+          <td>NIM</td>
+          <td><input type="text" name="nim" class="txt" value="<?php echo "$data[nim]"; ?>" readonly></td>
+      </tr>	
+      <tr>
+          <td>Nama</td>
+          <td><input type="text" name="nama" class="txt" maxlength="50" value="<?php echo "$data[nama]"; ?>"></td>
+      </tr>
+      <tr>
+          <td>Alamat</td>
+          <td><input type="text" name="alamat" class="txt" maxlength="50" value="<?php echo "$data[alamat]"; ?>"></td>
+      </tr>
+      <tr>
+          <td>Jenis Kelamin</td>
+          <td>       
+              <input name="jenis_kelamin" type="radio" id="jns" value="1" <?php if($data['jenis_kelamin']==1){ echo "checked=checked";}  ?>/> Laki-laki
+              <input name="jenis_kelamin" type="radio" id="jns" value="0" <?php if($data['jenis_kelamin']==0){ echo "checked=checked";}  ?>/> Perempuan
+          </td>
+      </tr>
+      <tr>
+          <td>Foto Profile</td>
+          <td><input name="foto" type="file"/></td>
+      </tr>
+  </table>
+      <button type="submit" class="btn btn-success" value="Simpan">Submit</button>
+      <button type="reset" class="btn btn-secondary" value="Reset">Reset</button>
+      <a class="btn btn-primary" style="color: white; text-decoration: none;" href="home.php">Kembali</a>
+  </form>
+</div>
+
+<!-- edit php di universitas -->
+  <div class="col-10 m-auto" style="padding: 100px 0 0 0;"></div>
+    <h2 class="text-center fw-bold">Ubah Data Mahasiswa</h2>
+    <div class="col-md-8 m-auto card p-5 shadow p-3 mb-5 bg-body rounded">
+        <form name="form1" action="user-update.php" method="post" onSubmit="return cek_form(this)" enctype="multipart/form-data"></form>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nim</label>
+          <input type="text" name="nim" class="txt" value="<?php echo "$data[nim]"; ?>" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nama</label>
+          <input type="text" name="nama" class="txt" maxlength="50" value="<?php echo "$data[nama]"; ?>">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Alamat</label>
+          <input type="text" name="alamat" class="txt" maxlength="50" value="<?php echo "$data[alamat]"; ?>">
+        </div>
+        <div class="mb-3">
+          <p>Jenis Kelamin</p>
+          <input name="jenis_kelamin" type="radio" id="jns" value="1" <?php if($data['jenis_kelamin']==1){ echo "checked=checked";}  ?>/> Laki-laki
+          <label for="gender1Input" class="form-label">Pria</label>
+          <input name="jenis_kelamin" type="radio" id="jns" value="0" <?php if($data['jenis_kelamin']==0){ echo "checked=checked";}  ?>/> Perempuan
+          <label for="gender2Input" class="form-label">Wanita</label>
+        </div>
+        <div class="mb-3">
+          <label for="formFile" class="form-label">Foto Profil</label>
+          <input name="foto" class="form-control" type="file" id="formFile">
+      </div>
+        <button type="submit" class="btn btn-success" value="Simpan">Submit</button>
+        <button type="submit" class="btn btn-secondary" value="Reset">Reset</button>
+        <a class="btn btn-primary" style="color: white; text-decoration: none;" href="home.php">Kembali</a>
+      </form>
+    </div>
